@@ -12,8 +12,9 @@ $(document).ready ->
                                                      
    
     eventClick:
-      (event) -> $("#myModal").modal "show"
-      
+      (event) -> $("#myModal .modal-body .modal-body-content").load '/events/' + event.id, ->
+                 $("#myModal").modal "show"
+     
     header:
       left: 'prev,next today', center: 'title', right: 'month,agendaWeek,agendaDay'
     defaultView: 'month'
