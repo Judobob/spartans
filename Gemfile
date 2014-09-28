@@ -44,4 +44,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 #appearance
-gem 'slim', '~> 2.0.3'
+gem 'slim-rails', '~> 2.1.5'

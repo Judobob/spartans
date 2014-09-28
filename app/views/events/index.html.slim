@@ -1,0 +1,31 @@
+#myModal.modal.fade tabindex="-1" 
+  .modal-header
+    button.close aria-hidden="true" data-dismiss="modal" type="button"  &times;
+    h3.modal-title Campustask
+  .modal-body
+    .modal-body-content hello
+    .ajax-loader
+  .modal-footer
+    button.btn data-dismiss="modal" type="button"  Close
+h1 Listing events
+#calendar
+table
+  thead
+    tr
+      th Title
+      th Description
+      th Start time
+      th End time
+      th colspan="3" 
+  tbody
+    - @events.each do |event|
+      tr
+        td= event.title
+        td= event.description
+        td= event.start_time
+        td= event.end_time
+        td= link_to 'Show', event
+        td= link_to 'Edit', edit_event_path(event)
+        td= link_to 'Destroy',event , :method => :delete , :confirm => 'Are you sure?'  
+br
+  = link_to 'New Event', new_event_path
