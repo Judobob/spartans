@@ -45,3 +45,6 @@ gem 'spring',        group: :development
 
 #appearance
 gem 'slim-rails', '~> 2.1.5'
+
+#file upload
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"

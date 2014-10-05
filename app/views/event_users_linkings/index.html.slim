@@ -1,0 +1,27 @@
+h1 Listing event_users_linkings
+
+table
+  thead
+    tr
+      th User
+      th Event
+      th Venue
+      th Max participants
+      th
+      th
+      th
+
+  tbody
+    - @event_users_linkings.each do |event_users_linking|
+      tr
+        td = event_users_linking.user_id
+        td = event_users_linking.event_id
+        td = event_users_linking.venue
+        td = event_users_linking.max_participants
+        td = link_to 'Show', event_users_linking
+        td = link_to 'Edit', edit_event_users_linking_path(event_users_linking)
+        td = link_to 'Destroy', event_users_linking, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Event users linking', new_event_users_linking_path

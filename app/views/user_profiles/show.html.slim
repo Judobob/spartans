@@ -1,0 +1,18 @@
+p#notice= notice
+p
+  strong First name:
+  = @user_profile.first_name
+p
+  strong String,last name:
+  = @user_profile.string,last_name
+p
+  strong String,user name:
+  = @user_profile.string,user_name
+p
+  strong String,mobile:
+  = @user_profile.string,mobile
+p
+  strong String:
+  = @user_profile.string,email
+= link_to 'Edit', edit_user_profile_path(@user_profile)
+= link_to 'Back', user_profiles_path

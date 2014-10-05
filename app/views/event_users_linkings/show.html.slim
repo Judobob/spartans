@@ -1,0 +1,15 @@
+p
+  strong User:
+  = @event_users_linking.user_id
+p
+  strong Event detail:
+  = @event_users_linking.event_detail_id
+p
+  strong Venue:
+  = @event_users_linking.venue
+p
+  strong Max participants:
+  = @event_users_linking.max_participants
+
+= link_to 'Edit', edit_event_details_linking_path(@event_details_linking)
+= link_to 'Back', event_details_linkings_path

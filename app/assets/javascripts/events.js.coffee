@@ -20,5 +20,11 @@ $(document).ready ->
     defaultView: 'month'
     slotMinutes: 30
     height: 600
+    minTime: 3
+    maxTime: 21
+    
+    
+
+                          
     
     

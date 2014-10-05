@@ -1,0 +1,13 @@
+p
+  strong Name:
+  = @event_detail.name
+p
+  strong Description:
+  = @event_detail.description
+p
+  strong Picture:
+  = @event_detail.picture
+
+= link_to 'Edit', edit_event_detail_path(@event_detail)
+
+= link_to 'Back', event_details_path

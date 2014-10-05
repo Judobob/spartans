@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  devise_for :users
+  root :to => redirect('/events')
+
+  resources :event_users_linkings
+
+  resources :event_details
+
   resources :user_profiles
 
-  root :to => redirect('/events')
   resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.

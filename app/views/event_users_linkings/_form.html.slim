@@ -1,0 +1,21 @@
+= form_for @event_details_linking do |f|
+  - if @event_details_linking.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@event_details_linking.errors.count, "error")} prohibited this event_details_linking from being saved:"
+      ul
+        - @event_details_linking.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :user_id
+    = f.text_field :user_id
+  .field
+    = f.label :event_id
+    = f.text_field :event_detail_id
+  .field
+    = f.label :venue
+    = f.text_field :venue
+  .field
+    = f.label :max_participants
+    = f.text_field :max_participants
+  .actions = f.submit 'Save'
